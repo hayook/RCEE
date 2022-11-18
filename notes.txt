@@ -15,4 +15,11 @@
     > server cash
 
 
+    // Redux
+    I - Create the store
+        1 - import createStore function from redux (useReducer())
+        2 - a variable contains the state ([state, dispatch])
+        3 - reducer function (useReducer(reducer, initialValue)) 
+
+
     

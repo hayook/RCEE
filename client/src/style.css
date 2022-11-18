@@ -61,17 +61,6 @@ h1 {
   border: 1px solid #fff; 
 }
 
-.input::before {
-  content: '1\n   2';
-  width: 40px; 
-  height: 40px; 
-  border: 1px solid #fff; 
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  white-space: break-word;
-}
-
 textarea:focus {
   outline: none;
 }

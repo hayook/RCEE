@@ -1,10 +1,7 @@
-import { useState } from 'react'
-import { useGlobalState } from "./gloabalState"
 import LangItem from './LangItem'; 
+import { connect } from 'react-redux';
 
-export default function Languages() {
-
-    const { languages } = useGlobalState();
+function Languages({ languages }) {
 
     return (
         <ul className="languagesBar">
@@ -17,3 +14,6 @@ export default function Languages() {
         </ul>
     )
 }
+
+const mapStateToProps = (state) => ({ languages: state.languages });
+export default connect(mapStateToProps)(Languages);
