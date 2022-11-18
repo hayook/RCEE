@@ -1,0 +1,18 @@
+
+    > Colorize the the identifiers and the key words (depends on the language)
+    > Add The indentati on after when back to line (depends on the language)
+    > The comments (depends on the language)
+    > autoclosing of () and "" ...
+    > Lines numbers 
+    > Highlight the current line 
+    > Windows Resizing 
+    > Indentation when pressing on tab (remove the input blure)
+    > Work more on the structure (React Components) and the designe 
+    > preventDefault() to treat code
+    > What is the command prompet ? what is bash ? what is the shell ? how they work and why child process can execute commmands 
+
+    > how to change the path of exec (the path of execution of the funciton) and the problem of the path of gcc
+    > server cash
+
+
+    
