@@ -1,5 +1,6 @@
 #include <stdio.h>
 
 int main(void) {
-	printf("adsfad");
+        i = 0;
+	printf("hello there %d", i);
 }

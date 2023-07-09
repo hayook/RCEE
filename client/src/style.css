@@ -57,8 +57,7 @@ h1 {
   border-color: #555;
   padding: 20px 0 0 30px;
   font-family: 'Consolas', monospace;
-  font-size: 1rem;
-  border: 1px solid #fff; 
+  font-size: 1rem; 
 }
 
 textarea:focus {
