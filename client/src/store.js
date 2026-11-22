@@ -1,11 +1,29 @@
 import { createStore } from 'redux';
 import reducer from './reducer';
 
+const languages = [
+    {
+        langId: 1, 
+        name: 'C',
+        userCode: '#include <stdio.h>\n\nint main(void) {\n\tprintf("hello there");\n}'
+    },
+    {
+        langId: 2, 
+        name: 'Python',
+        userCode: 'print("Hello, World!")'
+    },
+    {
+        langId: 4, 
+        name: 'JavaScript',
+        userCode: 'console.log("Hello, World!");'
+    },
+];
+
 const initialState = {
-    languages: [],
-    userLanguage: {}, 
+    languages: languages,
+    userLanguage: languages[0], 
     networkError: false, 
-    isLoading: true,
+    isLoading: false,
     isCompiling: false,
     userOutput: 'Output Here',
 };

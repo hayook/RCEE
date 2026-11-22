@@ -14,15 +14,15 @@ function Input({ dispatch, userLanguage, isLoading, networkError }) {
     const handleRun = async () => {
         dispatch({ type: ACTIONS.SET_COMPILING, payload: true});
         try {
-            const response = await fetch('http://localhost:5000/', {
+            const response = await fetch('http://localhost:5000/run', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json;charset=utf-8',
                 },
-                body: JSON.stringify({ userLanguage  })
+				body: JSON.stringify({ lang: userLanguage.name, code: userLanguage.userCode })
             });
             const result = await response.json();
-            dispatch({ type: ACTIONS.SET_USER_OUTPUT, payload: result.output})
+            dispatch({ type: ACTIONS.SET_USER_OUTPUT, payload: result.output || result.error })
         } catch (err) {
             dispatch({ type: ACTIONS.SET_USER_OUTPUT, payload: 'Network Error'});   
         }

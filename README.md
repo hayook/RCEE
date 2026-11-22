@@ -1,26 +1,44 @@
-# Remote Code Execution Engine
+# MeetCode
 
-### Frontend
-Install packages 
-
-```$ npm install ```
-
-Run the development server
-
-```$ npm start```
-
-### Backend 
-Install packages
-
-```$ npm install```
-
-Run the development server
-
-```$ npm start```
+A remote code execution platform that securely runs untrusted user code inside isolated Docker containers.
 
 ### Supported languages
-* C : gcc should be installed
-* Python : python should be installed
-* JavaScript : node.js should be installed
 
-## No Docker at the moment 😢
+- C
+- Python 3
+- JavaScript (Node.js)
+
+### Prerequisites
+
+- Node.js (v18+)
+- Docker
+
+### Local development environment
+
+**1. Build the Docker Sandbox Image**
+
+```
+docker build -t mc-sandbox ./docker-client/sandbox
+```
+
+**2. Start the runner service**
+```
+cd docker-client
+npm install
+sudo node app.js
+```
+
+**3. Start the web server**
+```
+cd server
+npm install
+npm run dev
+```
+
+**4. Start the frontend**
+
+```
+cd client
+npm install
+npm start
+```

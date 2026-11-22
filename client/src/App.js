@@ -8,28 +8,7 @@ import { ACTIONS } from './actions';
 import { connect } from 'react-redux'; 
 
 
-function App({ setIsLoading, setUserLanguage, setLanguages, setNetworkError }) {
-
-	useEffect(() => {
-
-		// I can put this & all the funcitons of the click event in the reducer
-		fetch('http://localhost:5000/')
-			.then(res => res.json())
-			.then(data => {
-				// dispatch({ type: ACTIONS.SET_LOADING, payload: false });
-				setIsLoading(false); 
-				// dispatch({ type: ACTIONS.SET_LANGUAGES, payload: data.languages });
-				setLanguages(data.languages);
-				// dispatch({ type: ACTIONS.SET_USER_LANGUAGE, payload: data.languages[0] });
-				setUserLanguage(data.languages[0]);
-			})
-			.catch(() => {
-				// dispatch({ type: ACTIONS.SET_LOADING, payload: false });
-				setIsLoading(false);
-				// dispatch({ type: ACTIONS.SET_NETWORK_ERRORS, payload: true });
-				setNetworkError(true);
-			})
-	}, [])
+function App() {
 
 	return (
 		<>
